@@ -1,1 +1,10 @@
 node_modules/
+_site/
+
+# odt
+.~lock.*
+
+# generated files
+*.docx
+*.pdf
+*.odt

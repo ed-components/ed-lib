@@ -1,0 +1,106 @@
+---
+type: pb
+title: Entiers naturels en base 2
+age:
+subject: informatics
+duration: 10m
+objective: Représenter des entiers en binaire
+tags:
+  - binaire
+  - représentation des données
+---
+
+> Un problème est un ensemble d'exercices avec des questions de différents types dans lesquels les réponses sont
+> rédigé par les professeurs. À partir de cette source, vous pouvez générer des devoirs dans différents formats pour
+> étudiants sous format numérique ou papier.
+
+:::note
+Par convention, on note en indice la base des nombres: $2_{10}=10_2$ se lit 2 en base 10 est égal 10 en base .
+:::
+
+# QCM
+
+1. Quelle est la représentation de $3_10$ en base 2.
+
+   - [ ] $1$
+   - [ ] $10$
+   - [x] $11$
+   - [ ] $20$
+   - [ ] $21$
+
+1. Quelle est la représentation de $1011_2$ en base 10.
+
+   - [ ] $9$
+   - [ ] $10$
+   - [x] $11$
+   - [ ] $13$
+
+1. Dans quelle écriture est présent le chiffre $A$.
+
+   - [ ] l'écriture binaire
+   - [ ] l'écriture décimale
+   - [x] l'écriture héxadécimale
+
+1. Dans quelle écriture est présent le chiffre $5$.
+
+   - [ ] l'écriture binaire
+   - [x] l'écriture décimale
+   - [x] l'écriture héxadécimale
+
+1. Dans quelle écriture est présent le chiffre $1$.
+
+   - [x] l'écriture binaire
+   - [x] l'écriture décimale
+   - [x] l'écriture héxadécimale
+
+## Entiers naturels en base deux
+
+1. Écrire la représentation en base deux du nombre 8.
+
+   :::ans
+   1000
+   :::
+
+1. Trouver la représentation en base dix du nombre $1001~0110_2$.
+
+   :::num
+   12354
+   :::
+
+
+1. Pour multiplier par dix un entier naturel exprimé en base dix, il suffit d'ajouter un 0 à sa
+   droite, par exemple, $12 \times 10 = 120$.
+
+   1. Écrire en base 10 les valeurs de $11$, $110$, $1100$ et $11000$ en les séparant par des virgules.
+
+      :::ans
+      3,6,12,24
+      :::
+
+
+   1. En déduire quelle opération est effectuée si on ajoute un zéro à un  entier naturel
+   exprimé en base deux ?
+
+   :::ans
+   Lorsqu'n ajoute un zéro en base deux, le nombre est multiplié par deux.
+   :::
+
+## Octet et information
+
+1. Combien de bits d'informations contient un octet ? Combien un octet peut-il représenter de
+   valeurs différentes ?
+
+   :::ans
+
+   Un octet contient 8 bits, il peut représenter $2^8=256$ informations.
+
+   :::
+
+
+2. On veut représenter les 101 départements français par un nombre binaire de longueur fixe. Quel est le nombre minimal de bits à utiliser ?
+
+   :::[num]
+   7
+   :::
+
+
