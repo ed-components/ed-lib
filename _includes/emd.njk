@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+{% block head %}
+    <script type="module">
+        import registerComponents from "https://esm.sh/@ed-components/ed-components";
+        registerComponents()
+    </script>
+{% endblock %}
+{% block main %}
+    <ed-pb>
+        {{ content|safe }}
+    </ed-pb>
+{% endblock %}

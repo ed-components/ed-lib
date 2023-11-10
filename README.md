@@ -6,4 +6,6 @@ YSWYG editor: https://milkdown.dev/docs/plugin/example-iframe-plugin
 
 ## Licence
 
-Content is licensed under the [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), see LICENSE file for the legal notice.
+Content is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), see [LICENSE-CONTENT](./LICENCE-CONTENT) file for the legal notice.
+
+Code is licensed under [MIT](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), see [LICENSE-CODE](./LICENCE-CODE) file for the legal notice.

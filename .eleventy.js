@@ -1,21 +1,20 @@
 module.exports = function (eleventyConfig) {
 
     // Add emd as a valid extension to process
-    eleventyConfig.addTemplateFormats("emd");
-    eleventyConfig.addExtension("emd", {
-        compile: async (inputContent) => {
-            // Replace any instances of cloud with butt
-            console.log(inputContent)
-
-            return async () => {
-                return inputContent;
+    eleventyConfig.addExtension(['emd'], {
+        key: 'html',
+        compile: function (inputContent, inputPath) {
+            return function (data) {
+                // TODO maybe preprocess html at build time
+                return this.defaultRenderer(data);
             };
         }
-    });
+    }
+    )
     return {
         dir: {
-            data: "../_data",
             input: "content",
+            data: "../_data",
             includes: "../_includes"
         }
     }
