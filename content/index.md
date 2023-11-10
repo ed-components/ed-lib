@@ -1,5 +1,5 @@
 ---
-layout: "base.njk"
+layout: "index.njk"
 ---
 
 from index

@@ -2,7 +2,10 @@
 
 Collection of educational content written with ed-components.
 
-YSWYG editor: https://milkdown.dev/docs/plugin/example-iframe-plugin
+## Technical stack
+
+- 11ty: static site genrator.
+- Consider YSWYG editor: https://milkdown.dev/docs/plugin/example-iframe-plugin
 
 ## Licence
 

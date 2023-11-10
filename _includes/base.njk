@@ -10,12 +10,20 @@
             <link rel="modulepreload" href="https://esm.sh/@ed-components/ed-components"/>
         {% endblock %}
         <link
-        rel="stylesheet" href="/style.css"/>
-    {# <link rel="icon" href="/logo.svg">#}
+        rel="stylesheet" href="/style.css"/> {# pagefind search #}
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <script src="/pagefind/pagefind-ui.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                new PagefindUI({element: "#search", showSubResults: true});
+            });
+        </script>
+        {# <link rel="icon" href="/logo.svg">#}
     </head>
     <body>
         <header>
             Header
+            <div id="search"></div>
         </header>
         <main>
             {% block main %}

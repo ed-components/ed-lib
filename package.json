@@ -4,12 +4,14 @@
   "description": "Easily write and share edcuational content with educational markdown aka emd!",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
+    "build:index": "npx pagefind --site \"_site\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "pagefind": "^1.0.3"
   }
 }
