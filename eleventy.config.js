@@ -11,11 +11,17 @@ module.exports = function (eleventyConfig) {
         }
     }
     )
+    // watch for dev
+    eleventyConfig.addWatchTarget("11ty/_assets/style.css");
+    // copy assets to oudir
+    eleventyConfig.addPassthroughCopy({ "design/*.svg": "." });
+    eleventyConfig.addPassthroughCopy({ "11ty/_assets/style.css": "." });
+
     return {
         dir: {
             input: "content",
-            data: "../_data",
-            includes: "../_includes"
+            data: "../11ty/_data",
+            includes: "../11ty/_includes"
         }
     }
 };

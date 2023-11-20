@@ -14,13 +14,9 @@ tags:
 > rédigé par les professeurs. À partir de cette source, vous pouvez générer des devoirs dans différents formats pour
 > étudiants sous format numérique ou papier.
 
-:::note
-Par convention, on note en indice la base des nombres: $2_{10}=10_2$ se lit 2 en base 10 est égal 10 en base .
-:::
-
 # QCM
 
-1. Quelle est la représentation de $3_10$ en base 2.
+1. Quelle est la représentation de $3_{10}$ en base 2.
 
    - [ ] $1$
    - [ ] $10$
@@ -57,50 +53,40 @@ Par convention, on note en indice la base des nombres: $2_{10}=10_2$ se lit 2 en
 
 1. Écrire la représentation en base deux du nombre 8.
 
-   :::ans
-   1000
-   :::
+   - :num: 1000
 
 1. Trouver la représentation en base dix du nombre $1001~0110_2$.
 
-   :::num
-   12354
-   :::
+   - :num: 12354
 
 
 1. Pour multiplier par dix un entier naturel exprimé en base dix, il suffit d'ajouter un 0 à sa
    droite, par exemple, $12 \times 10 = 120$.
 
-   1. Écrire en base 10 les valeurs de $11$, $110$, $1100$ et $11000$ en les séparant par des virgules.
+   1. Écrire en base 10 les nombres binaires $11_2$, $110_2$, $1100_2$ et $11000_2$ en les séparant par des virgules.
 
-      :::ans
-      3,6,12,24
-      :::
+      - :100: 3,6,12,24
 
 
    1. En déduire quelle opération est effectuée si on ajoute un zéro à un  entier naturel
    exprimé en base deux ?
 
-   :::ans
-   Lorsqu'n ajoute un zéro en base deux, le nombre est multiplié par deux.
-   :::
+      - :100: Lorsqu'n ajoute un zéro en base deux, le nombre est multiplié par deux.
+      - :100: Le nombre est multiplié par deux.
+      - :100: Une multiplication par deux.
+
 
 ## Octet et information
 
-1. Combien de bits d'informations contient un octet ? Combien un octet peut-il représenter de
-   valeurs différentes ?
+1. Combien de bits d'informations contient un octet ?
 
-   :::ans
+   - :num: 8
 
-   Un octet contient 8 bits, il peut représenter $2^8=256$ informations.
+1. Combien un octet peut-il représenter de valeurs différentes ?
 
-   :::
-
+   - :num: 256
 
 2. On veut représenter les 101 départements français par un nombre binaire de longueur fixe. Quel est le nombre minimal de bits à utiliser ?
 
-   :::[num]
-   7
-   :::
-
+   - :num: 7
 

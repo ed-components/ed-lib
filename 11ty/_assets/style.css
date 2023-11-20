@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-self: stretch;
+  max-height: 50px;
+
+  & > a[href]:not(:hover, :focus-visible) {
+    color: var(--text-1);
+    text-decoration-color: var(--link);
+  }
+
+  & > a[href="/"] {
+    margin-inline-end: auto;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    & > img {
+      height: 1em;
+    }
+  }
+}
+
+/* .github-icon {
+  fill: var(--nav-icon);
+  stroke: none;
+
+  :hover > & {
+    fill: var(--nav-icon-hover);
+  }
+} */
