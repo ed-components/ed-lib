@@ -10,8 +10,20 @@
 @import "open-props/src/props.animations.css";
 /* TODO buttons exists on themes variations */
 @import "open-props/src/extra/buttons.css";
-
 @import "./_nav.postcss";
+@import "./_hero.postcss";
+
+:root {
+  [data-theme="light"] & {
+    --brand-bg-gradient: linear-gradient(
+      to bottom,
+      var(--purple-6),
+      var(--violet-6),
+      var(--indigo-6),
+      var(--cyan-6)
+    );
+  }
+}
 
 main {
   margin: 0 auto;

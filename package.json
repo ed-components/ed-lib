@@ -4,6 +4,7 @@
   "description": "Easily write and share edcuational content with educational markdown aka emd!",
   "scripts": {
     "prestart": "node scripts/buildCJSModules.mjs",
+    "format": "prettier --write .",
     "build:index": "npx pagefind --site \"_site\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx concurrently -n w: npm:watch:*",

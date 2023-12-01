@@ -7,11 +7,17 @@
             text-anchor: middle;
             dominant-baseline: middle;
         }
+
+        rect {
+            fill: none;
+        }
     </style>
-    <text x="42" y="25" font-family="Open Sans" fill="#339af0">
+    <rect x="2.5" y="2.5" width="95" height="95" stroke="#845ef7" stroke-width="5px" rx="5px" ry="5px"
+        stroke-linejoin="round" />
+    <text x="42" y="33" font-family="Open Sans" fill="#5c7cfa">
         Ed
     </text>
-    <text x="50" y="75" font-family="Open Sans" fill="#339af0">
+    <text x="50" y="78" font-family="Open Sans" fill="#339af0">
         Lib
     </text>
 </svg>
