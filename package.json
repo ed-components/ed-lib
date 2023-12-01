@@ -1,5 +1,5 @@
 {
-  "name": "ed-library",
+  "name": "ed-lib",
   "version": "0.0.0",
   "description": "Easily write and share edcuational content with educational markdown aka emd!",
   "scripts": {
