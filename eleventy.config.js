@@ -14,10 +14,10 @@ module.exports = function (eleventyConfig) {
     },
   });
   // watch for dev
-  eleventyConfig.addWatchTarget("11ty/_assets/style.css");
+  eleventyConfig.addWatchTarget("11ty/_assets/*")
   // copy assets to oudir
   eleventyConfig.addPassthroughCopy({ "design/*.svg": "." });
-  eleventyConfig.addPassthroughCopy({ "11ty/_assets/style.css": "." });
+  eleventyConfig.addPassthroughCopy({ "11ty/images/": "/images" });
 
   return {
     dir: {
