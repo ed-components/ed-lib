@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <style>
+        .L-shape {
+            font-size: 300px;
+            font-family: "NotoSerif";
+            font-weight: 200;
+            fill: var(--indigo-5, #5c7cfa);
+        }
+
+        .ed-shape {
+            font-size: 80px;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            fill: var(--violet-5, #845ef7);
+        }
+
+        .ib-shape {
+            font-size: 90px;
+            font-family: "NotoSerif";
+            font-weight: 400;
+            fill: var(--blue-5, #339af0);
+        }
+    </style>
+    <text class="L-shape" x="0" y="200">L</text>
+    <text class="ed-shape" x="50" y="75">ed</text>
+    <text class="ib-shape" x="80" y="175">ib</text>
+
+
+
+</svg>
