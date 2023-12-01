@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "Easily write and share edcuational content with educational markdown aka emd!",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
+    "prestart": "node scripts/buildCJSModules.mjs",
+    "start": "npm run prestart && npx @11ty/eleventy --serve",
     "build:index": "npx pagefind --site \"_site\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,10 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "esbuild": "^0.19.8",
     "pagefind": "^1.0.3"
+  },
+  "dependencies": {
+    "@ed-components/ed-components": "^0.0.12"
   }
 }

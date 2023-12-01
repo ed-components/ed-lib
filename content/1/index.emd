@@ -10,9 +10,10 @@ tags:
   - représentation des données
 ---
 
-> Un problème est un ensemble d'exercices avec des questions de différents types dans lesquels les réponses sont
-> rédigé par les professeurs. À partir de cette source, vous pouvez générer des devoirs dans différents formats pour
-> étudiants sous format numérique ou papier.
+> Un problème est un ensemble d'exercices avec des questions de différents types
+> dans lesquels les réponses sont rédigé par les professeurs. À partir de cette
+> source, vous pouvez générer des devoirs dans différents formats pour étudiants
+> sous format numérique ou papier.
 
 # QCM
 
@@ -71,7 +72,7 @@ tags:
    1. En déduire quelle opération est effectuée si on ajoute un zéro à un  entier naturel
    exprimé en base deux ?
 
-      - :100: Lorsqu'n ajoute un zéro en base deux, le nombre est multiplié par deux.
+      - :100: Lorsqu'on ajoute un zéro en base deux, le nombre est multiplié par deux.
       - :100: Le nombre est multiplié par deux.
       - :100: Une multiplication par deux.
 
@@ -86,7 +87,8 @@ tags:
 
    - :num: 256
 
-2. On veut représenter les 101 départements français par un nombre binaire de longueur fixe. Quel est le nombre minimal de bits à utiliser ?
+2. On veut représenter les 101 départements français par un nombre binaire de
+   longueur fixe. Quel est le nombre minimal de bits à utiliser ?
 
    - :num: 7
 
