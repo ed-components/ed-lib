@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "description": "Easily write and share edcuational content with educational markdown aka emd!",
   "scripts": {
-    "prestart": "node scripts/buildCJSModules.mjs",
+    "prestart": "concurrently -n b: npm:build:*",
     "format": "prettier --write .",
-    "build:index": "npx pagefind --site \"_site\"",
+    "build:searchindex": "npx pagefind --site \"_site\"",
+    "build:css": "postcss \"11ty/_assets/style.postcss\" --verbose --config postcss.config.cjs -o \"_site/style.css\"",
+    "build:cjs": "node scripts/buildCJSModules.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx concurrently -n w: npm:watch:*",
     "watch:html": "npm run prestart && npx @11ty/eleventy --serve",
-    "watch:css": "postcss \"11ty/_assets/style.postcss\" --verbose --config postcss.config.cjs --watch -o \"_site/style.css\""
+    "watch:css": "npm run build:css -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +31,7 @@
   },
   "dependencies": {
     "@ed-components/ed-components": "^0.0.12",
+    "@zachleat/pagefind-search": "^1.0.2",
     "pagefind": "^1.0.3"
   }
 }

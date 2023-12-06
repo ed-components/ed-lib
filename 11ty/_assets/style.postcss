@@ -10,6 +10,7 @@
 @import "open-props/src/props.animations.css";
 /* TODO buttons exists on themes variations */
 @import "open-props/src/extra/buttons.css";
+
 @import "./_nav.postcss";
 @import "./_hero.postcss";
 
@@ -23,10 +24,22 @@
       var(--cyan-6)
     );
   }
+  [data-theme="dark"] & {
+    --pagefind-ui-primary: yellow;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: green;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
 }
 
 main {
   margin: 0 auto;
   min-height: 100vh;
   max-width: 80ch;
+}
+
+/* serach pagefind */
+.pagefind-ui__drawer {
+  position: absolute;
 }

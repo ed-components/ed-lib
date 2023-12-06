@@ -11,12 +11,20 @@
             {# other scripts #}
         {% endblock %}
         <link
-        rel="stylesheet" href="/style.css"/> {# pagefind search #}
-        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        rel="stylesheet" href="/style.css"/>
+        {# pagefind search #}
         <script src="/pagefind/pagefind-ui.js"></script>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
-                new PagefindUI({element: "#search", showSubResults: true});
+                new PagefindUI({
+                    element: "#search",
+                    showSubResults: true,
+                    resetStyles: false,
+                    showImages: false,
+                    translations: {
+                        clear_search: "X"
+                    }
+                });
             });
         </script>
         <link rel="icon" href="/icon.svg">
