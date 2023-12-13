@@ -11,6 +11,6 @@
 {% endblock %}
 {% block main %}
     {% include "_hero.njk" %}
-    <div id="search"></div>
+    {% include "_multi-format.njk" %}
     {{ content|safe }}
 {% endblock %}

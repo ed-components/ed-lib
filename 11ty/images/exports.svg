@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="320" height="160">
+    <!-- Arrow from Markdown to HTML -->
+    <path d="M40 80 L80 80" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+    <!-- Arrow from Markdown to DOCX -->
+    <path d="M40 80 L80 40" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+    <!-- Arrow from Markdown to ODT -->
+    <path d="M40 80 L80 120" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+    <!-- Arrow from Markdown to PDF -->
+    <path d="M40 80 L80 120" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+
+    <!-- HTML icon with label -->
+    <g transform="translate(100,30)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+            <path d="M5 3v18h14V3H5zm12 16H7V5h10v14zM9 8h6v2H9V8zm0 4h6v2H9v-2z"/>
+        </svg>
+        <text x="0" y="55" text-anchor="middle">HTML</text>
+    </g>
+
+    <!-- DOCX icon with label -->
+    <g transform="translate(100,70)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+            <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM8 8v2h8V8H8zm0 4v2h8v-2H8zm0 4v2h5v-2H8z"/>
+        </svg>
+        <text x="0" y="55" text-anchor="middle">DOCX</text>
+    </g>
+
+    <!-- ODT icon with label -->
+    <g transform="translate(100,110)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+            <path d="M3 3v18h18V3H3zm4 4v2h10V7H7zm0 4v2h10v-2H7zm0 4v2h10v-2H7zm0 4v2h7v-2H7zm9-12v10h2V7h-2zm-4 4H7v2h5v-2z"/>
+        </svg>
+        <text x="0" y="55" text-anchor="middle">ODT</text>
+    </g>
+
+    <!-- PDF icon with label -->
+    <g transform="translate(280,80)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+            <path d="M5 3v18h14V3H5zm0 16h14v4H5v-4zm10-9l-5 6H8l5-6h2zm-5 3V8l5 6h-2l-5-6zm5 0h2l5 6v-5l-5-6z"/>
+        </svg>
+        <text x="-30" y="55" text-anchor="middle">PDF</text>
+    </g>
+
+    <!-- Arrowhead marker definition -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="0" refY="3.5" orient="auto" fill="black">
+            <polygon points="0 0, 10 3.5, 0 7" />
+        </marker>
+    </defs>
+</svg>
