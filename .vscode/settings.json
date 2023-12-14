@@ -1,4 +1,7 @@
 {
   "svg.preview.background": "dark-transparent",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[njk]": {
+    "editor.formatOnSave": false
+  }
 }

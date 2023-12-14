@@ -1,5 +1,5 @@
 ---
-layout: edit.njk
+layout: base.njk
 title: EMD editor
 ---
 
@@ -10,39 +10,71 @@ title: EMD editor
       > div {
         flex: 1;
       }
+      h2 {
+        text-align: center;
+      }
     }
   </style>
+  <script type="module">
+    import registerComponents from "https://esm.sh/@ed-components/ed-components";
+    registerComponents()
+  </script>
 {% endblock %}
 {% block main %}
   <div class="edit">
     <div id="editor">
-      EDITOR
+      <h2>Editeur</h2>
     </div>
-    PREVIEW
     <div>
+      <h2>Rendu</h2>
       <ed-pb id="preview"></ed-pb>
     </div>
   </div>
   <script type="module">
     import {basicSetup, EditorView} from "https://esm.sh/codemirror"
     import {markdown, markdownLanguage} from "https://esm.sh/@codemirror/lang-markdown"
-    const editor = document.querySelector("#editor");
-    const preview = document.querySelector("#preview");
-    let updateListenerExtension = EditorView.updateListener.of((update) => {
+    
+    const emd = `# Hello world
+This is a paragraph
+
+And a question:
+
+1. what is the answer?
+
+   - [x] True
+   - [ ] False
+`     
+
+    
+       
+    // editor change listener
+    const updateListenerExtension = EditorView.updateListener.of((update) => {
       if (update.docChanged) {
         // Handle the event here
-        const emd = update
+        const newEmd = update
           .state
           .doc
           .text
-        preview
-        .innerHTML = emd
+
+        updatePreview(newEmd.join("\n"))
+      }
+    });
+    // preview
+    const updatePreview = (emd) => {
+      const preview = document.createElement("ed-pb");
+      preview.innerHTML = emd
+      document.querySelector("ed-pb").replaceWith(preview);
     }
-  });
-  let view = new EditorView({
-    doc: "Hello **world**",
-    parent: editor,
-    extensions: [updateListenerExtension, basicSetup]
-  });
+
+    // editor initialization
+    const editor = document.querySelector("#editor");
+    
+    let view = new EditorView({
+      doc: emd,
+      parent: editor,
+      extensions: [updateListenerExtension, basicSetup]
+    });
+
+    updatePreview(emd)    
   </script>
 {% endblock %}
