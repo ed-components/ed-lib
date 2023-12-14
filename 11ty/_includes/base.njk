@@ -33,11 +33,9 @@
         <header>
             {% include "_nav.njk" %}
         </header>
-        <main>
             {% block main %}
                 {{ content|safe }}
             {% endblock %}
-        </main>
         <footer>
             FOOTER
         </footer>

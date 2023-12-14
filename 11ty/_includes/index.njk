@@ -10,7 +10,9 @@
     </script>
 {% endblock %}
 {% block main %}
+    <main>
     {% include "_hero.njk" %}
     {% include "_multi-format.njk" %}
     {{ content|safe }}
+    </main>
 {% endblock %}

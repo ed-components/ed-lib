@@ -6,7 +6,10 @@
     </script>
 {% endblock %}
 {% block main %}
+<main>
+    <a href="/edit/?id={{ emdId }}"><button>edit</button></a>
     <ed-pb html>
         {{ content|safe }}
     </ed-pb>
+</main>
 {% endblock %}

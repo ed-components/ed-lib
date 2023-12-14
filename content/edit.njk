@@ -32,9 +32,15 @@ title: EMD editor
   </div>
   <script type="module">
     import {basicSetup, EditorView} from "https://esm.sh/codemirror"
-    import {markdown, markdownLanguage} from "https://esm.sh/@codemirror/lang-markdown"
     
-    const emd = `# Hello world
+    // get id document or start new one
+    const docId = new URLSearchParams(window.location.search).get("id");
+    let emd = ""
+    if (docId !== null){
+      const resp = await fetch(`/content/${docId}/index.emd`)
+      emd = await resp.text()
+    } else {
+      emd = `# Hello world
 This is a paragraph
 
 And a question:
@@ -43,8 +49,9 @@ And a question:
 
    - [x] True
    - [ ] False
-`     
-
+`     }
+   
+   console.log(emd)
     
        
     // editor change listener

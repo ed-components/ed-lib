@@ -5,6 +5,11 @@ module.exports = function (eleventyConfig) {
   // Add emd as a valid extension to process
   eleventyConfig.addExtension(["emd"], {
     key: "html",
+    getData: function (inputPath) {
+      // DIY, this object will be merged into data cascade
+      console.log(inputPath)
+      return { id: 12345 };
+    },
     compile: function (inputContent, inputPath) {
       return function (data) {
         return md2HTML(inputContent);
