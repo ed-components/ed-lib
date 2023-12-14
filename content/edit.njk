@@ -1,0 +1,48 @@
+---
+layout: edit.njk
+title: EMD editor
+---
+
+{% block head %}
+  <style>
+    .edit {
+      display: flex;
+      > div {
+        flex: 1;
+      }
+    }
+  </style>
+{% endblock %}
+{% block main %}
+  <div class="edit">
+    <div id="editor">
+      EDITOR
+    </div>
+    PREVIEW
+    <div>
+      <ed-pb id="preview"></ed-pb>
+    </div>
+  </div>
+  <script type="module">
+    import {basicSetup, EditorView} from "https://esm.sh/codemirror"
+    import {markdown, markdownLanguage} from "https://esm.sh/@codemirror/lang-markdown"
+    const editor = document.querySelector("#editor");
+    const preview = document.querySelector("#preview");
+    let updateListenerExtension = EditorView.updateListener.of((update) => {
+      if (update.docChanged) {
+        // Handle the event here
+        const emd = update
+          .state
+          .doc
+          .text
+        preview
+        .innerHTML = emd
+    }
+  });
+  let view = new EditorView({
+    doc: "Hello **world**",
+    parent: editor,
+    extensions: [updateListenerExtension, basicSetup]
+  });
+  </script>
+{% endblock %}
