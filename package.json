@@ -5,7 +5,8 @@
   "scripts": {
     "prestart": "concurrently -n b: npm:build:*",
     "format": "prettier --write .",
-    "build:searchindex": "npx pagefind --site \"_site\"",
+    "build": "concurrently -n b: npm:build:*",
+    "postbuild": "npx pagefind --site \"_site\"",
     "build:cjs": "node scripts/buildCJSModules.mjs",
     "build:css": "postcss \"11ty/_assets/style.postcss\" --verbose --config postcss.config.cjs -o \"_site/style.css\"",
     "build:html": "npx @11ty/eleventy",

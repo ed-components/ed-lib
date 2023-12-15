@@ -2,6 +2,9 @@
 const md2HTML = require("./scripts/build/md2HTML.cjs").md2HTML;
 
 module.exports = function (eleventyConfig) {
+  // needed for gh-pages
+  pathPrefix: "/ed-lib/"
+
   // Add emd as a valid extension to process
   eleventyConfig.addExtension(["emd"], {
     key: "html",
