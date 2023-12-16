@@ -5,8 +5,16 @@
   header {
     display: flex;
     gap: 2rem;
+
     h1 {
-      font-size: var(--font-size-6);
+      /* font-size: var(--font-size-3); */
+      /* opacity: 0; */
+      /* aopacity: 0; */
+      animation:
+        var(--animation-fade-in) forwards,
+        var(--animation-slide-in-up) forwards;
+      animation-timing-function: var(--ease-out-5);
+      animation-delay: 0.5s;
     }
   }
 
