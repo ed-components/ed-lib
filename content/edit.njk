@@ -50,20 +50,18 @@ And a question:
    - [x] True
    - [ ] False
 `     }
-   
-   console.log(emd)
-    
-       
+
     // editor change listener
     const updateListenerExtension = EditorView.updateListener.of((update) => {
       if (update.docChanged) {
-        // Handle the event here
+        // handle doc change
+        // TODO maybe update only on ENTER
         const newEmd = update
           .state
           .doc
-          .text
+          .toString();
 
-        updatePreview(newEmd.join("\n"))
+        updatePreview(newEmd)
       }
     });
     // preview
