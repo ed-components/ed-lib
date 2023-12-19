@@ -1,13 +1,13 @@
 {
   "name": "ed-lib",
   "version": "0.0.0",
+  "type": "module",
   "description": "Easily write and share edcuational content with educational markdown aka emd!",
   "scripts": {
     "prestart": "concurrently -n b: npm:build:*",
     "format": "prettier --write .",
     "build": "concurrently -n b: npm:build:*",
     "postbuild": "npx pagefind --site \"_site\"",
-    "build:cjs": "node scripts/buildCJSModules.mjs",
     "build:css": "postcss \"11ty/_assets/style.postcss\" --verbose --config postcss.config.cjs -o \"_site/style.css\"",
     "build:html": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,9 +19,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.2",
     "concurrently": "^8.2.2",
-    "esbuild": "^0.19.8",
     "open-props": "^1.5.15",
     "postcss": "^8.4.29",
     "postcss-cli": "^10.1.0",

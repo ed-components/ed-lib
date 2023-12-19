@@ -1,10 +1,6 @@
-// need to bundle it with esbuild until 11ty supports esm
-const md2HTML = require("./scripts/build/md2HTML.cjs").md2HTML;
+import { md2HTML } from "@ed-components/ed-components/common.js";
 
-module.exports = function (eleventyConfig) {
-  // needed for gh-pages
-  pathPrefix: "/ed-lib/"
-
+export default async function (eleventyConfig) {
   // Add emd as a valid extension to process
   eleventyConfig.addExtension(["emd"], {
     key: "html",
