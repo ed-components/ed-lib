@@ -1,7 +1,6 @@
-// need to bundle it with esbuild until 11ty supports esm
-const md2HTML = require("./scripts/build/md2HTML.cjs").md2HTML;
+import { md2HTML } from "./scripts/build/md2HTML.cjs";
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   // Add emd as a valid extension to process
   eleventyConfig.addExtension(["emd"], {
     key: "html",
