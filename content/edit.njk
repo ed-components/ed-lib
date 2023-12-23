@@ -51,6 +51,22 @@ And a question:
    - [ ] False
 `     }
 
+    // handle metadata
+    // TODO at the moment only strip it
+    // TODO maybe move this in ed-components directly
+    const handleMetadata = (emd) => {
+    const sep = "---\n"
+        let metadata = {};
+        let content = emd;
+        if (emd.startsWith(sep)) {
+            const splits = emd.split(sep);
+            console.log(splits.length)
+            content = splits.length > 2 ? splits.slice(2).join(sep): splits.join(sep)
+        }
+        return { metadata, content };
+    };
+
+
     // editor change listener
     const updateListenerExtension = EditorView.updateListener.of((update) => {
       if (update.docChanged) {
@@ -67,13 +83,13 @@ And a question:
     // preview
     const updatePreview = (emd) => {
       const preview = document.createElement("ed-pb");
-      preview.innerHTML = emd
+      const {content} = handleMetadata(emd);
+      preview.innerHTML = content
       document.querySelector("ed-pb").replaceWith(preview);
     }
 
     // editor initialization
     const editor = document.querySelector("#editor");
-    
     let view = new EditorView({
       doc: emd,
       parent: editor,
